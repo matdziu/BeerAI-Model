@@ -1,0 +1,55 @@
+name: beerai-model
+channels:
+- anaconda
+- conda-forge
+- defaults
+dependencies:
+- freetype=2.8=h143eb01_0
+- hdf5=1.8.18=h1edb405_0
+- jpeg=9b=haccd157_1
+- libpng=1.6.32=hce72d48_2
+- libprotobuf=3.2.0=0
+- libtiff=4.0.8=h8cd0352_9
+- matplotlib=2.0.2=py36h507e440_1
+- olefile=0.44=py36ha08bf50_0
+- pillow=4.2.1=py36h0263179_0
+- protobuf=3.2.0=py36_0
+- zlib=1.2.11=h60db283_1
+- backports=1.0=py36_1
+- backports.functools_lru_cache=1.4=py36_1
+- ca-certificates=2017.7.27.1=0
+- certifi=2017.7.27.1=py36_0
+- cycler=0.10.0=py36_0
+- h5py=2.7.1=py36_1
+- keras=2.0.6=py36_0
+- mock=2.0.0=py36_0
+- ncurses=5.9=10
+- openssl=1.0.2l=0
+- pbr=3.1.1=py36_0
+- pip=9.0.1=py36_0
+- pyparsing=2.2.0=py36_0
+- python=3.6.2=0
+- python-dateutil=2.6.1=py36_0
+- pytz=2017.2=py36_0
+- pyyaml=3.12=py36_1
+- readline=6.2=0
+- setuptools=36.3.0=py36_0
+- six=1.11.0=py36_1
+- sqlite=3.13.0=1
+- tensorflow=1.0.0=py36_0
+- tk=8.5.19=2
+- tornado=4.5.2=py36_0
+- wheel=0.30.0=py_1
+- xz=5.2.3=0
+- yaml=0.1.6=0
+- intel-openmp=2018.0.0=hdd0ccc9_7
+- libcxx=4.0.1=h579ed51_0
+- libcxxabi=4.0.1=hebd6815_0
+- libgfortran=3.0.1=h93005f0_2
+- mkl=2018.0.0=hc285769_4
+- numpy=1.13.3=py36h2cdce51_0
+- scipy=0.19.1=py36h3e758e1_3
+- pip:
+  - backports.functools-lru-cache==1.4
+prefix: /Users/mateuszdziubek/anaconda/envs/beerai-model
+

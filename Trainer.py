@@ -1,8 +1,12 @@
+import json
+
 import numpy as np
 from keras.callbacks import ModelCheckpoint
 from keras.layers import Flatten, Dense, Dropout
 from keras.models import Sequential
 from keras.utils import to_categorical
+
+PROJECT_PATH = "/Users/mateuszdziubek/Desktop/BeerAI-Model"
 
 num_classes = 10
 batch_size = 48
@@ -24,6 +28,9 @@ model.summary()
 model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
+
+output_file = open(f"{PROJECT_PATH}/models/model.txt", 'w')
+json.dump(model.to_json(), output_file)
 
 model_checkpoint = ModelCheckpoint(filepath='beer_label_classifier_weights.h5', verbose=1, save_best_only=True)
 model.fit(train_data, train_labels,

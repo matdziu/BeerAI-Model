@@ -1,5 +1,3 @@
-import json
-
 import numpy as np
 from keras.callbacks import ModelCheckpoint
 from keras.layers import Flatten, Dense, Dropout
@@ -30,7 +28,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 output_file = open(f"{PROJECT_PATH}/models/model.json", 'w')
-json.dump(model.to_json(), output_file)
+output_file.write(model.to_json())
 
 model_checkpoint = ModelCheckpoint(filepath='beer_label_classifier_weights.h5', verbose=1, save_best_only=True)
 model.fit(train_data, train_labels,

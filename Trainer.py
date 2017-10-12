@@ -29,7 +29,7 @@ model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
-output_file = open(f"{PROJECT_PATH}/models/model.txt", 'w')
+output_file = open(f"{PROJECT_PATH}/models/model.json", 'w')
 json.dump(model.to_json(), output_file)
 
 model_checkpoint = ModelCheckpoint(filepath='beer_label_classifier_weights.h5', verbose=1, save_best_only=True)

@@ -25,7 +25,7 @@ validation_generator = datagen.flow_from_directory(
 
 bottleneck_features_extractor = InceptionV3(include_top=False, weights='imagenet', input_shape=(150, 150, 3))
 
-output_file = open(f"{PROJECT_PATH}/models/bottleneck_features_extractor.txt", 'w')
+output_file = open(f"{PROJECT_PATH}/models/bottleneck_features_extractor.json", 'w')
 json.dump(bottleneck_features_extractor.to_json(), output_file)
 
 bottleneck_features_train = bottleneck_features_extractor.predict_generator(train_generator,

@@ -4,8 +4,6 @@ import numpy as np
 from keras.applications import InceptionV3
 from keras.preprocessing.image import ImageDataGenerator
 
-PROJECT_PATH = "/Users/mateuszdziubek/Desktop/BeerAI-Model"
-
 datagen = ImageDataGenerator(rescale=1. / 255)
 
 batch_size = 16
@@ -23,9 +21,6 @@ validation_generator = datagen.flow_from_directory(
     shuffle=False)
 
 bottleneck_features_extractor = InceptionV3(include_top=False, weights='imagenet', input_shape=(150, 150, 3))
-
-output_file = open(f"{PROJECT_PATH}/models/bottleneck_features_extractor.json", 'w')
-output_file.write(bottleneck_features_extractor.to_json())
 
 bottleneck_features_train = bottleneck_features_extractor.predict_generator(train_generator,
                                                                             math.ceil(
